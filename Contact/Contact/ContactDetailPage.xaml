@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contact.ContactDetailPage">
+    <Grid Margin="10, 20, 10, 0"> <!--Margin: left, Top, right, bottom-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/> <!--*: Utiliza todo el ancho disponible (Caso: 1/3 de ancho)-->
+            <ColumnDefinition Width="2*"/> <!--2*: Ocupa el doble del espacio disponible (Caso: 2/3 de ancho)-->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!--Auto: Toma en automatico el alto, depende del contenido-->
+            <RowDefinition Height="*"/> <!--*: Ocupa todo el ancho disponible-->
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="labelName"
+               Text="Nombre Apellido"
+               Grid.Column="1"
+               TextColor="{StaticResource colorTextMain}"/>
+        
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="labelEmail" Text="correo@electronico.com"/>
+            <Label x:Name="labelTelephone" Text="777-272-0115"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

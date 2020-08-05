@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contact.NewContactPage">
+    <!--Contenido de la página-->
+    <ContentPage.Content>
+        <StackLayout Margin="20"> <!--Margin: left, Top, right, bottom-->
+            <Entry x:Name="entryName"
+                   Placeholder="Nombre"
+                   Text=""/>
+            <Entry x:Name="entryLastName"
+                   Placeholder="Apellidos"
+                   Text=""/>
+            <!--La propiedad Keyboard, permite mostrar en pantalla el teclado acorde al valor-->
+            <Entry x:Name="entryEmail"
+                   Style="{StaticResource additional}"
+                   Placeholder="Correo Electronico"
+                   Keyboard="Email"
+                   Text=""/>
+            <Entry x:Name="entryTelephone"
+                   Style="{StaticResource additional}"
+                   Placeholder="Teléfono"
+                   Keyboard="Telephone"
+                   Text=""/>
+            <Button x:Name="buttonSave"
+                    Text="Guardar"
+                    Clicked="ButtonSave_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
